@@ -1,0 +1,67 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "telefono": 102013313,
+      "email": "juan@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 2,
+      "nombre": "Karen",
+      "telefono": 138198313,
+      "email": "karen@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 3,
+      "nombre": "Josue",
+      "telefono": 31983913,
+      "email": "josue@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 4,
+      "nombre": "Miguel",
+      "telefono": 319381983,
+      "email": "miguel@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro",
+      "telefono": 1398198938,
+      "email": "pedro@juan.com",
+      "empresa": "Codigo Con Juan"
+    },
+    {
+      "nombre": "Mirco Martin",
+      "empresa": "Ecloud",
+      "email": "mircocmartin@gmail.com",
+      "telefono": "341 155 4868",
+      "id": 0.42201653058089295
+    },
+    {
+      "nombre": "Mirco Martin",
+      "empresa": "Ecloud",
+      "email": "mircocmartin@gmail.com",
+      "telefono": "341 155 4868",
+      "id": 0.4963749482765132
+    },
+    {
+      "nombre": "Diego Lagos",
+      "empresa": "Lanus",
+      "email": "diego@lagos.com",
+      "telefono": "3412292343",
+      "id": 0.09719163256027108
+    },
+    {
+      "nombre": "Cami Coronato",
+      "empresa": "Abogada",
+      "email": "cami.coronato@gmail.com",
+      "telefono": "3412292396",
+      "id": 0.9092603208737502
+    }
+  ]
+}
