@@ -15,13 +15,25 @@ export const clientsReducer = ( state: ClientsState, action: ClientsActionType )
 			return {
 				...state,
 				clients: [ action.payload, ...state.clients ],
-				client: null
+				client: {
+					"id": 0,
+					"nombre": "",
+					"telefono": 0,
+					"email": '',
+					"empresa": '',
+				},
 			}
 		case 'Clients - Get All Clients':
 			return {
 				...state,
 				clients: action.payload,
-				client: null
+				client: {
+					"id": 0,
+					"nombre": "",
+					"telefono": 0,
+					"email": '',
+					"empresa": '',
+				},
 			}
 		case 'Clients - Delete Client':
 			return {
@@ -29,10 +41,8 @@ export const clientsReducer = ( state: ClientsState, action: ClientsActionType )
 				clients: state.clients.filter( ( client ) => {
 					return client.id !== action.payload.id
 				}),
-				client: null
 			}
 		case 'Clients - Current Client':
-			console.log(state.client)
 			return {
 				...state,
 				clients: state.clients,
@@ -45,7 +55,7 @@ export const clientsReducer = ( state: ClientsState, action: ClientsActionType )
 				error: action.payload
 			}
 		default:
-				return state;
+			return state;
 	}
 
 }

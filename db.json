@@ -40,28 +40,21 @@
       "empresa": "Ecloud",
       "email": "mircocmartin@gmail.com",
       "telefono": "341 155 4868",
-      "id": 0.42201653058089295
-    },
-    {
-      "nombre": "Mirco Martin",
-      "empresa": "Ecloud",
-      "email": "mircocmartin@gmail.com",
-      "telefono": "341 155 4868",
-      "id": 0.4963749482765132
+      "id": 42201653058089295
     },
     {
       "nombre": "Diego Lagos",
       "empresa": "Lanus",
       "email": "diego@lagos.com",
       "telefono": "3412292343",
-      "id": 0.09719163256027108
+      "id": 9719163256027108
     },
     {
       "nombre": "Cami Coronato",
       "empresa": "Abogada",
       "email": "cami.coronato@gmail.com",
       "telefono": "3412292396",
-      "id": 0.9092603208737502
+      "id": 9092603208737502
     }
   ]
 }

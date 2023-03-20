@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Client } from '../interfaces/interfaces';
 import { ClientsContext } from '../context/ClientsContext';
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -8,22 +8,22 @@ interface NewClientState {
 	registerForm: Client;
 }
 
-interface FormProps {
-	client?: Client;
-}
+export const FormClient = () => {
 
-export const FormClient = ({ client }: FormProps) => {
-
-	const { addNewClient } = useContext( ClientsContext )
-	const { register, handleSubmit, formState: { errors } } = useForm<NewClientState["registerForm"]>({});
+	const { addNewClient, client } = useContext( ClientsContext )
+	const { register, handleSubmit, formState: { errors }, reset } = useForm<NewClientState["registerForm"]>({ defaultValues: client });
 	const navigate = useNavigate();
+
+	useEffect(() => {
+    reset(client);
+  }, [client, reset]);
 
 	const handleRegister: SubmitHandler<Client> = (data) => {
 
-		if (client?.email) {
+		if (client.email) {
 			console.log('existe')
 		}else{
-			addNewClient( {...data, id: Math.random()} );
+			addNewClient( {...data, id: (Math.random()+1)} );
 		}
 		navigate('/', { replace: true });
 	}
@@ -49,7 +49,7 @@ export const FormClient = ({ client }: FormProps) => {
 						type="text"
 						className="mt-2 block w-full p-3 bg-gray-50"
 						placeholder="Nombre del Cliente"
-						defaultValue={client?.nombre}
+						
 					/>
 					<p className="text-red-400 font-bold text-l uppercase mt-2">{ errors.nombre?.message }</p>
 				</div>
@@ -70,7 +70,7 @@ export const FormClient = ({ client }: FormProps) => {
 						type="text"
 						className="mt-2 block w-full p-3 bg-gray-50"
 						placeholder="Empresa del Cliente"
-						defaultValue={client?.empresa}
+						
 					/>
 					<p className="text-red-400 font-bold text-l uppercase mt-2">{ errors.empresa?.message }</p>
 				</div>
@@ -90,7 +90,7 @@ export const FormClient = ({ client }: FormProps) => {
 						})}
 						className="mt-2 block w-full p-3 bg-gray-50"
 						placeholder="Email del Cliente"
-						defaultValue={client?.email}
+						
 					/>
 					<p className="text-red-400 font-bold text-l uppercase mt-2">{ errors.email?.message }</p>
 				</div>
@@ -110,7 +110,7 @@ export const FormClient = ({ client }: FormProps) => {
 						})}
 						className="mt-2 block w-full p-3 bg-gray-50"
 						placeholder="Teléfono del Cliente"
-						defaultValue={client?.telefono}
+						
 					/>
 					<p className="text-red-400 font-bold text-l uppercase mt-2">{ errors.telefono?.message }</p>
 				</div>

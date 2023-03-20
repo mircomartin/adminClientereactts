@@ -10,13 +10,19 @@ interface ClientsProviderProps {
 
 export interface ClientsState {
 	clients: Client[];
-	client: Client | null;
+	client: Client;
 	error: string;
 }
 
 const Clients_INITIAL_STATE: ClientsState = {
 	clients: [],
-	client: null,
+	client: {
+		"id": 0,
+    "nombre": "",
+    "telefono": 0,
+    "email": '',
+    "empresa": '',
+	},
 	error: '',
 }
 
@@ -68,7 +74,6 @@ export const ClientsProvider = ( { children }: ClientsProviderProps ) => {
 			type: 'Clients - Current Client',
 			payload: resp,
 		})
-		
 	}
 
 	const setError = ( error: string ) => {

@@ -3,7 +3,7 @@ import { Client } from "../interfaces/interfaces";
 
 interface ContextProps {
 	clients: Client[];
-	client: Client | null;
+	client: Client;
 	error: string;
 
 	//Methods
